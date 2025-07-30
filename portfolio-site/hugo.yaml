@@ -1,9 +1,9 @@
 baseURL: "https://teddyDn2001.github.io/twitter-aws-data-engineer/"
-canonifyURLs: true
 languageCode: en-us
 title: "Twitter AWS Data Engineering"
 theme: "PaperMod"
 enableRobotsTXT: true
+canonifyURLs: true
 
 pagination:
   pagerSize: 10
@@ -22,16 +22,11 @@ params:
 menu:
   main:
     - name: "About"
-      url: "/about/"
+      url: "about/"
       weight: 1
     - name: "Projects"
-      url: "/projects/"
+      url: "projects/"
       weight: 2
     - name: "Docs"
-      url: "/docs/"
+      url: "docs/"
       weight: 3
-
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
