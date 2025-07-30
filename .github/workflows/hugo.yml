@@ -2,28 +2,22 @@ name: Deploy Hugo to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (with submodules)
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true         # rất quan trọng để kéo theme PaperMod
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -32,21 +26,13 @@ jobs:
           hugo-version: '0.148.2'
           extended: true
 
-      - name: Build site (in portfolio-site)
-        run: hugo --minify -s portfolio-site
+      - name: Build site (force baseURL)
+        run: hugo --minify -s portfolio-site \
+          --baseURL "https://teddyDn2001.github.io/twitter-aws-data-engineer/"
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: portfolio-site/public
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: portfolio-site/public
+          publish_branch: gh-pages
