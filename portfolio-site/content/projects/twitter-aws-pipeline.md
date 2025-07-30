@@ -18,7 +18,7 @@ Luồng xử lý:
 ![AWS Architecture](/images/architecture.png)
 
 ## QuickSight Dashboard
-![QuickSight Dashboard](/images/quicksight.png)
+![QuickSight Dashboard](/images/quicks.png)
 
 ## Redshift COPY
 ```sql
