@@ -1,0 +1,37 @@
+baseURL: "https://teddyDn2001.github.io/twitter-aws-data-engineer/"
+languageCode: en-us
+title: "Twitter AWS Data Engineering"
+theme: "PaperMod"
+enableRobotsTXT: true
+canonifyURLs: true
+
+pagination:
+  pagerSize: 10   # thay cho 'paginate' đã bị deprecate
+
+params:
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  comments: false
+  homeInfoParams:
+    Title: "Twitter AWS Data Engineering"
+    Content: "Portfolio: End-to-end pipeline with AWS (S3, EMR Spark, Redshift, Glue, Athena, QuickSight, Power BI)."
+
+menu:
+  main:
+    - name: "About"
+      url: "/about/"
+      weight: 1
+    - name: "Projects"
+      url: "/projects/"
+      weight: 2
+    - name: "Docs"
+      url: "/docs/"
+      weight: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

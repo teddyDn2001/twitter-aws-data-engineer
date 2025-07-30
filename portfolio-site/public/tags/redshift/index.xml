@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Redshift on Twitter AWS Data Engineering</title>
+    <link>http://localhost:1313/twitter-aws-data-engineer/tags/redshift/</link>
+    <description>Recent content in Redshift on Twitter AWS Data Engineering</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/twitter-aws-data-engineer/tags/redshift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Twitter AWS Data Engineering Pipeline</title>
+      <link>http://localhost:1313/twitter-aws-data-engineer/projects/twitter-aws-pipeline/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/twitter-aws-data-engineer/projects/twitter-aws-pipeline/</guid>
+      <description>End-to-end pipeline: S3, EMR Spark, Glue, Athena/Redshift, Airflow, BI.</description>
+    </item>
+  </channel>
+</rss>

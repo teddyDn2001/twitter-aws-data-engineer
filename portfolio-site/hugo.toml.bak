@@ -1,0 +1,50 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Twitter AWS Data Engineering"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowCodeCopyButtons = true
+  ShowBreadCrumbs = true
+  ShowToc = true
+
+  # Chế độ trang giới thiệu trên trang chủ
+  [params.profileMode]
+    enabled = true
+    title = "Twitter AWS Data Engineering"
+    subtitle = "End-to-end pipeline on AWS: EMR Spark, S3, Glue, Athena/Redshift, Airflow."
+    imageUrl = "images/hero.png"
+    imageTitle = "Twitter Pipeline"
+    imageWidth = 320
+    imageHeight = 320
+
+  # Nút nhanh trên trang chủ
+  [[params.profileMode.buttons]]
+    name = "Project"
+    url = "/projects/twitter-aws-pipeline/"
+  [[params.profileMode.buttons]]
+    name = "Docs"
+    url = "/docs/"
+
+  # Social
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/<your-username>/twitter-aws-data-engineer"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 30
