@@ -1,4 +1,5 @@
 baseURL: "https://teddyDn2001.github.io/twitter-aws-data-engineer/"
+relativeURLs: true
 languageCode: en-us
 title: "Twitter AWS Data Engineering"
 theme: "PaperMod"
