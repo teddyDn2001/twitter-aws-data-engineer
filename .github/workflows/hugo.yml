@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true         # rất quan trọng để kéo theme PaperMod
+          submodules: true        # Quan trọng: kéo theme (PaperMod) nếu dùng submodule
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -26,7 +26,7 @@ jobs:
           hugo-version: '0.148.2'
           extended: true
 
-      - name: Build site (force baseURL)
+      - name: Build site
         run: hugo --minify -s portfolio-site \
           --baseURL "https://teddyDn2001.github.io/twitter-aws-data-engineer/"
 
